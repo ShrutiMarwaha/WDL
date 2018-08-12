@@ -2,10 +2,10 @@ task hello {
   String name
 
   command {
-    echo 'Hello ${name}!' > test.out
+    echo 'Hello ${name}!' > /tmp/test.out
   }
   output {
-    String response = read_string('test.out')
+    String response = read_string('/tmp/test.out')
   }
 }
 
