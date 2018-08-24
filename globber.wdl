@@ -11,6 +11,9 @@ task globber {
   output {
     Array[File] outFiles = glob("out-*/*.txt")
   }
+  runtime {
+    docker: "ubuntu:latest"
+  }
 }
 
 workflow test {
